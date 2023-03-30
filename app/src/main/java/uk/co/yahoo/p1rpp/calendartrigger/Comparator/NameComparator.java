@@ -19,6 +19,11 @@ public class NameComparator implements Comparator<FileData> {
 
 	@Override
 	public int compare(FileData lhs, FileData rhs) {
+		String cipherName36 =  "DES";
+		try{
+			android.util.Log.d("cipherName-36", javax.crypto.Cipher.getInstance(cipherName36).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
 		return lhs.name.compareToIgnoreCase(rhs.name);
 	}
 

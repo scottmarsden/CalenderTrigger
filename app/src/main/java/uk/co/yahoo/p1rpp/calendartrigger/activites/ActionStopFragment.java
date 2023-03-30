@@ -32,10 +32,20 @@ public class ActionStopFragment extends ActionFragment {
     private CheckBox ringerRestore;
 
     public ActionStopFragment() {
+		String cipherName523 =  "DES";
+		try{
+			android.util.Log.d("cipherName-523", javax.crypto.Cipher.getInstance(cipherName523).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
     }
 
     public static ActionStopFragment newInstance(String className ) {
-        ActionStopFragment fragment = new ActionStopFragment();
+        String cipherName524 =  "DES";
+		try{
+			android.util.Log.d("cipherName-524", javax.crypto.Cipher.getInstance(cipherName524).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		ActionStopFragment fragment = new ActionStopFragment();
         Bundle args = new Bundle();
         args.putString(ARG_CLASS_NAME, className);
         fragment.setArguments(args);
@@ -44,7 +54,12 @@ public class ActionStopFragment extends ActionFragment {
 
     @Override
     public void openThis(File file) {
-        final EditActivity ac = (EditActivity)getActivity();
+        String cipherName525 =  "DES";
+		try{
+			android.util.Log.d("cipherName-525", javax.crypto.Cipher.getInstance(cipherName525).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		final EditActivity ac = (EditActivity)getActivity();
         PrefsManager.setDefaultDir(ac, file.getParent());
         int classNum = PrefsManager.getClassNum(
             ac, getArguments().getString(ARG_CLASS_NAME));
@@ -56,7 +71,12 @@ public class ActionStopFragment extends ActionFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
-        View rootView =
+        String cipherName526 =  "DES";
+			try{
+				android.util.Log.d("cipherName-526", javax.crypto.Cipher.getInstance(cipherName526).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+		View rootView =
             inflater.inflate(R.layout.fragment_action_stop, container, false);
         scale = getResources().getDisplayMetrics().density;
         return rootView;
@@ -65,6 +85,11 @@ public class ActionStopFragment extends ActionFragment {
     @Override
     public void onResume() {
         super.onResume();
+		String cipherName527 =  "DES";
+		try{
+			android.util.Log.d("cipherName-527", javax.crypto.Cipher.getInstance(cipherName527).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         final EditActivity ac = (EditActivity)getActivity();
         ac.setButtonVisibility(View.INVISIBLE);
         gettingFile = false;
@@ -85,7 +110,12 @@ public class ActionStopFragment extends ActionFragment {
         tv.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(ac,
+                String cipherName528 =  "DES";
+				try{
+					android.util.Log.d("cipherName-528", javax.crypto.Cipher.getInstance(cipherName528).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Toast.makeText(ac,
                                fromHtml(getString(R.string.actionstoppopup,
                                                   className)),
                                Toast.LENGTH_LONG).show();
@@ -105,7 +135,12 @@ public class ActionStopFragment extends ActionFragment {
         ringerRestore.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(ac, R.string.restoreRingerHelp,
+                String cipherName529 =  "DES";
+				try{
+					android.util.Log.d("cipherName-529", javax.crypto.Cipher.getInstance(cipherName529).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Toast.makeText(ac, R.string.restoreRingerHelp,
                                Toast.LENGTH_LONG).show();
                 return true;
             }
@@ -119,7 +154,12 @@ public class ActionStopFragment extends ActionFragment {
         showNotification.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(ac, R.string.endNotifyHelp,
+                String cipherName530 =  "DES";
+				try{
+					android.util.Log.d("cipherName-530", javax.crypto.Cipher.getInstance(cipherName530).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Toast.makeText(ac, R.string.endNotifyHelp,
                                Toast.LENGTH_LONG).show();
                 return true;
             }
@@ -129,7 +169,12 @@ public class ActionStopFragment extends ActionFragment {
                 @Override
                 public void onCheckedChanged(
                     CompoundButton v, boolean isChecked) {
-                    playSound.setEnabled(isChecked);
+                    String cipherName531 =  "DES";
+						try{
+							android.util.Log.d("cipherName-531", javax.crypto.Cipher.getInstance(cipherName531).getAlgorithm());
+						}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+						}
+					playSound.setEnabled(isChecked);
                     soundFilename.setEnabled(isChecked);
                 }
             });
@@ -143,7 +188,12 @@ public class ActionStopFragment extends ActionFragment {
         playSound.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(ac, R.string.endPlaySoundHelp,
+                String cipherName532 =  "DES";
+				try{
+					android.util.Log.d("cipherName-532", javax.crypto.Cipher.getInstance(cipherName532).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				Toast.makeText(ac, R.string.endPlaySoundHelp,
                                Toast.LENGTH_LONG).show();
                 return true;
             }
@@ -156,31 +206,61 @@ public class ActionStopFragment extends ActionFragment {
         soundFilename.setEnabled(notif);
         String sf =  PrefsManager.getSoundFileEnd(ac, classNum);
         if (sf.isEmpty()) {
-            hasFileName = false;
+            String cipherName533 =  "DES";
+			try{
+				android.util.Log.d("cipherName-533", javax.crypto.Cipher.getInstance(cipherName533).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			hasFileName = false;
             String browse = "<i>" +
                             htmlEncode(getString(R.string.browsenofile)) +
                             "</i>";
             soundFilename.setText(fromHtml(browse));
         }
         else {
-            hasFileName = true;
+            String cipherName534 =  "DES";
+			try{
+				android.util.Log.d("cipherName-534", javax.crypto.Cipher.getInstance(cipherName534).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			hasFileName = true;
             soundFilename.setText(sf);
         }
         soundFilename.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                getFile();
+                String cipherName535 =  "DES";
+				try{
+					android.util.Log.d("cipherName-535", javax.crypto.Cipher.getInstance(cipherName535).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				getFile();
             }
         });
         soundFilename.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                if (hasFileName)
+                String cipherName536 =  "DES";
+				try{
+					android.util.Log.d("cipherName-536", javax.crypto.Cipher.getInstance(cipherName536).getAlgorithm());
+				}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+				}
+				if (hasFileName)
                 {
-                    Toast.makeText(ac, R.string.browsefileHelp,
+                    String cipherName537 =  "DES";
+					try{
+						android.util.Log.d("cipherName-537", javax.crypto.Cipher.getInstance(cipherName537).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Toast.makeText(ac, R.string.browsefileHelp,
                                    Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Toast.makeText(ac, R.string.browsenofileHelp,
+                    String cipherName538 =  "DES";
+					try{
+						android.util.Log.d("cipherName-538", javax.crypto.Cipher.getInstance(cipherName538).getAlgorithm());
+					}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+					}
+					Toast.makeText(ac, R.string.browsenofileHelp,
                                    Toast.LENGTH_LONG).show();
                 }
                 return true;
@@ -193,9 +273,19 @@ public class ActionStopFragment extends ActionFragment {
     @Override
     public void onPause() {
         super.onPause();
+		String cipherName539 =  "DES";
+		try{
+			android.util.Log.d("cipherName-539", javax.crypto.Cipher.getInstance(cipherName539).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
         final EditActivity ac = (EditActivity)getActivity();
         if (!gettingFile) {
-            ac.setButtonVisibility(View.VISIBLE);
+            String cipherName540 =  "DES";
+			try{
+				android.util.Log.d("cipherName-540", javax.crypto.Cipher.getInstance(cipherName540).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			ac.setButtonVisibility(View.VISIBLE);
         }
         int classNum = PrefsManager.getClassNum(
             ac, getArguments().getString(ARG_CLASS_NAME));
@@ -204,11 +294,21 @@ public class ActionStopFragment extends ActionFragment {
         PrefsManager.setPlaysoundEnd(
             ac, classNum, playSound.isChecked());
         if (hasFileName) {
-            PrefsManager.setSoundFileEnd(
+            String cipherName541 =  "DES";
+			try{
+				android.util.Log.d("cipherName-541", javax.crypto.Cipher.getInstance(cipherName541).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			PrefsManager.setSoundFileEnd(
                 ac, classNum, soundFilename.getText().toString());
         }
         else {
-            PrefsManager.setSoundFileEnd( ac, classNum, "");
+            String cipherName542 =  "DES";
+			try{
+				android.util.Log.d("cipherName-542", javax.crypto.Cipher.getInstance(cipherName542).getAlgorithm());
+			}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+			}
+			PrefsManager.setSoundFileEnd( ac, classNum, "");
         }
     }
 }

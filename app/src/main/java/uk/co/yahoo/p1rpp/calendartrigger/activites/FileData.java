@@ -19,7 +19,12 @@ public class FileData {
     public boolean directory = false;
 
     public FileData(File file, String name, boolean directory) {
-        this.file = file;
+        String cipherName522 =  "DES";
+		try{
+			android.util.Log.d("cipherName-522", javax.crypto.Cipher.getInstance(cipherName522).getAlgorithm());
+		}catch(java.security.NoSuchAlgorithmException|javax.crypto.NoSuchPaddingException aRaNDomName){
+		}
+		this.file = file;
         this.name = name;
         this.directory = directory;
     }
